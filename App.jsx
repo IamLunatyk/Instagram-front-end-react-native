@@ -5,7 +5,6 @@ import {
   Text,
   TouchableOpacity,
   View,
-  Dimensions,
 } from 'react-native';
 import Title from './components/Title/Title';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
@@ -13,6 +12,7 @@ import {faEnvelope} from '@fortawesome/free-regular-svg-icons';
 import globalStyle from './assets/styles/globalStyle';
 import UserStory from './components/UserStory/UserStory';
 import UserPost from './components/userPost/UserPost';
+import {scaleFontSize} from './assets/styles/scaling';
 
 const App = () => {
   const userStories = [
@@ -155,7 +155,7 @@ const App = () => {
                   <FontAwesomeIcon
                     icon={faEnvelope}
                     color="#898DAE"
-                    size={20}
+                    size={scaleFontSize(20)}
                   />
                   <View style={globalStyle.messageNumberContainer}>
                     <Text style={globalStyle.messageNumber}>2</Text>
