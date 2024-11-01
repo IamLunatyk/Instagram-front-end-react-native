@@ -11,7 +11,7 @@ const style = StyleSheet.create({
     marginRight: horizontalScale(20),
   },
   firstName: {
-    fontFamily: getFontFamily('inter', '500'),
+    fontFamily: getFontFamily('Inter', '500'),
     fontSize: scaleFontSize(18),
     color: '#022150',
     marginTop: verticalScale(8),

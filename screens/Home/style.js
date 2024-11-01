@@ -1,8 +1,12 @@
 import {StyleSheet} from 'react-native';
-import {getFontFamily} from '../fonts/helper';
-import {horizontalScale, scaleFontSize, verticalScale} from './scaling';
+import {getFontFamily} from '../../assets/fonts/helper';
+import {
+  horizontalScale,
+  scaleFontSize,
+  verticalScale,
+} from '../../assets/styles/scaling';
 
-const globalStyle = StyleSheet.create({
+const style = StyleSheet.create({
   header: {
     marginLeft: horizontalScale(27),
     marginRight: horizontalScale(17),
@@ -31,7 +35,7 @@ const globalStyle = StyleSheet.create({
   messageNumber: {
     color: '#ffffff',
     fontSize: scaleFontSize(6),
-    fontFamily: getFontFamily('inter', '600'),
+    fontFamily: getFontFamily('Inter', '600'),
   },
   userStoryContainer: {
     marginTop: verticalScale(20),
@@ -42,4 +46,4 @@ const globalStyle = StyleSheet.create({
   },
 });
 
-export default globalStyle;
+export default style;

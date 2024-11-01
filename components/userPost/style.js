@@ -21,12 +21,12 @@ const style = StyleSheet.create({
   },
   username: {
     color: '#000',
-    fontFamily: getFontFamily('inter', '600'),
+    fontFamily: getFontFamily('Inter', '600'),
     fontSize: scaleFontSize(18),
   },
   location: {
     color: '#79869F',
-    fontFamily: getFontFamily('inter', '400'),
+    fontFamily: getFontFamily('Inter', '400'),
     fontSize: scaleFontSize(12),
     marginTop: verticalScale(5),
   },
