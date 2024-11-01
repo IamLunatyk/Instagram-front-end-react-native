@@ -45,8 +45,15 @@ const style = StyleSheet.create({
   statContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingHorizontal: horizontalScale(40),
+    marginHorizontal: horizontalScale(40),
     marginTop: verticalScale(30),
+    paddingVertical: verticalScale(30),
+    borderBottomWidth: 1,
+    borderColor: '#E9EFF1',
+  },
+  statBorder: {
+    borderRightWidth: 1,
+    borderColor: '#E9EFF1',
   },
 });
 

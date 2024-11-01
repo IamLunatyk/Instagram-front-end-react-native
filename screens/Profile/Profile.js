@@ -22,11 +22,12 @@ const Profile = ({navigation}) => {
             <Text style={style.statAmount}>45</Text>
             <Text style={style.statType}>Following</Text>
           </View>
-
+          <View style={style.statBorder} />
           <View>
             <Text style={style.statAmount}>30M</Text>
             <Text style={style.statType}>Followers</Text>
           </View>
+          <View style={style.statBorder} />
           <View>
             <Text style={style.statAmount}>100</Text>
             <Text style={style.statType}>Posts</Text>
