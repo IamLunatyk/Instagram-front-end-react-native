@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
 import UserProfileImage from '../UserProfileImage/UserProfileImage';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faEllipsis} from '@fortawesome/free-solid-svg-icons';
@@ -11,8 +11,14 @@ import {
   faMessage,
 } from '@fortawesome/free-regular-svg-icons';
 import {horizontalScale, scaleFontSize} from '../../assets/styles/scaling';
+import {useState} from 'react';
 
 const UserPost = props => {
+  const [heartCount, setHeartCount] = useState(999);
+  const myFunction = () => {
+    setHeartCount(heartCount + 1);
+  };
+
   return (
     <View style={style.userPostContainer}>
       <View style={style.user}>
@@ -41,8 +47,13 @@ const UserPost = props => {
       </View>
       <View style={style.userPostStats}>
         <View style={style.userPostStatButton}>
-          <FontAwesomeIcon icon={faHeart} color="#79869F" />
-          <Text style={style.userPostStatText}>{props.likes}</Text>
+          <TouchableOpacity onPress={myFunction}>
+            <FontAwesomeIcon
+              icon={faHeart}
+              color={heartCount > 0 ? 'red' : '#79869F'}
+            />
+          </TouchableOpacity>
+          <Text style={style.userPostStatText}>{heartCount}</Text>
         </View>
         <View style={style.userPostStatButtonRight}>
           <FontAwesomeIcon icon={faMessage} color="#79869F" />
