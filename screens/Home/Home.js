@@ -171,6 +171,7 @@ const Home = ({navigation}) => {
               </View>
               <View style={style.userStoryContainer}>
                 <FlatList
+                  keyExtractor={item => 'useStory' + item.id} // Klucz unikalny dla każdego elementu
                   onEndReachedThreshold={0.5}
                   onEndReached={() => {
                     if (isLoadingUserStories) {
@@ -196,7 +197,6 @@ const Home = ({navigation}) => {
                   data={userStoriesRenderedData}
                   renderItem={({item}) => (
                     <UserStory
-                      key={'useStory' + item.id}
                       firstName={item.firstName}
                       profileImage={item.profileImage}
                     />
