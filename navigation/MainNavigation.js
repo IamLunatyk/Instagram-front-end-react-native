@@ -6,7 +6,7 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import ProfileTabTitle from '../components/ProfileTabTitle/ProfileTabTitle';
-import ProfiileTabContent from '../components/ProfileTabContent/ProfileTabContent';
+import ProfileTabContent from '../components/ProfileTabContent/ProfileTabContent';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -31,7 +31,7 @@ export const ProfileTabsNavigation = () => {
             <ProfileTabTitle isFocused={focused} title={'Photos'} />
           ),
         }}
-        component={ProfiileTabContent}
+        component={ProfileTabContent} // Poprawnie używamy komponentu
       />
       <ProfileTabs.Screen
         name={'Tab2'}
@@ -40,7 +40,7 @@ export const ProfileTabsNavigation = () => {
             <ProfileTabTitle isFocused={focused} title={'Videos'} />
           ),
         }}
-        component={ProfiileTabContent}
+        component={ProfileTabContent} // Poprawnie używamy komponentu
       />
       <ProfileTabs.Screen
         name={'Tab3'}
@@ -49,7 +49,7 @@ export const ProfileTabsNavigation = () => {
             <ProfileTabTitle isFocused={focused} title={'Saved'} />
           ),
         }}
-        component={ProfiileTabContent}
+        component={ProfileTabContent} // Poprawnie używamy komponentu
       />
     </ProfileTabs.Navigator>
   );
