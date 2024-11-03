@@ -13,9 +13,8 @@ const style = StyleSheet.create({
   },
   image: {
     width: horizontalScale(150),
-    height: verticalScale(100),
-    borderRadius: 20,
-    marginTop: verticalScale(-2),
+    height: verticalScale(80),
+    borderRadius: 12,
   },
 });
 
